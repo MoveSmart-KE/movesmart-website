@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import { useEffect } from "react";
 
