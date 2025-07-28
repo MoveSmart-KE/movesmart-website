@@ -1,7 +1,6 @@
 .git
 .gitignore
 .github
+.dockerignore
 dockerfile
 README.md
-.dockerignore
-nginx.conf
