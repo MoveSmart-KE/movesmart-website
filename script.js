@@ -36,6 +36,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Smooth scroll for navbar anchor links
+    const navLinksAnchor = document.querySelectorAll('.nav-link[href^="#"]');
+    navLinksAnchor.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').slice(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          e.preventDefault();
+          window.scrollTo({
+            top: targetSection.offsetTop - 80, // adjust for fixed navbar
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
